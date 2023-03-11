@@ -27,7 +27,7 @@ export const GitHubBornOn = () => {
     return (
         !loading &&
         <>
-         <h2>This Github User {myInfo.login}  was born on {myInfo.created_at} </h2>
+         <h2>The Github User {myInfo.login}  was born on {myInfo.created_at} </h2>
         </>
     )
 };
