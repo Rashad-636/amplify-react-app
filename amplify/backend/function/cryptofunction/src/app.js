@@ -31,7 +31,7 @@ const axios = require('axios')
 
 app.get('/coins', function(req, res) {
   // Define base url
-  let apiUrl = `https://api.coinlore.com/api/tickers?start=0&limit=10`
+  let apiUrl = `https://api.coinlore.com/api/tickers?start=0&limit=10`;
 
   // Check if there are any query string parameters
   // If so, reset the base url to include them
@@ -47,6 +47,23 @@ app.get('/coins', function(req, res) {
     })
     .catch(err => res.json({ error: err }))
 })
+
+
+
+/**************************************************************** */
+// new route for born date and username
+app.get('/born', function(req, res) {
+  // Define base url
+  let born = `https://api.github.com/users/Rashad-636`;
+
+  // Call API and return response
+  axios.get(born)
+    .then(response => {
+      res.json({  myInfo: response.data })
+    })
+    .catch(err => res.json({ error: err }))
+});
+/******************************************************************* */
 
 
 /**********************
