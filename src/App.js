@@ -54,7 +54,7 @@ const App = () => {
             <h5>${coin.price_usd}</h5>
           </div>
         ))
-      };
+      }
     </div>
   );
 }
